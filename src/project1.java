@@ -3,7 +3,7 @@ import java.util.*;
 import java.io.*;
 /**
  * @author Erika Boquist <eboquist@gmail.com>
- * @version 1.1
+ * @version 1.2
  * @since 2012-02-16
  * 
  * The project1 class contains the code for COSC603 project 1.
@@ -29,6 +29,7 @@ public class project1 {
 		File textFile;
 		FileReader textReader;
 		LineNumberReader lineNumber;
+		Map<String, Integer> wordMap;
 		
 		try{
 			//textFile is retrieved on OSX
@@ -41,9 +42,23 @@ public class project1 {
 				System.out.println("I'm on line: " + lineNumber.getLineNumber());
 				//format the lines so we can do something with it
                 formattedLineString = lineString.replaceAll("[\\n]", " ").replaceAll("[!.,?!:;/()]","").split(" ");
+                //create the new map for storing the words
+                wordMap = new LinkedHashMap<String,Integer>();
                 for(int i =0; i< formattedLineString.length; i+=1){
                 	//display all words in each line
-                    System.out.println(formattedLineString[i]);
+                    //System.out.println(formattedLineString[i]);
+                    String tempString = formattedLineString[i];
+                    //check if map has the word, if it doesn't, add it, or increase the count
+                    if(wordMap.get(tempString) == null){
+                    	wordMap.put(tempString, 1);
+                    }else{
+                    	wordMap.put(tempString, wordMap.get(tempString) +1);
+                    }
+                }
+                Set<String> words = wordMap.keySet();
+                //loop to print out all the words and the # of times they appeared in a line
+                for(String word:words){
+                	System.out.println(word  + " : " + wordMap.get(word));
                 }
 			}
 			textReader.close();
