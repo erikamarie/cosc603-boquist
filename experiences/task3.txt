@@ -1,0 +1,2 @@
+Task 3
+While I have used Google Code before to get updates to source code for other projects, I've never set up a project in it for committing updates and checking the differences in the files. I am very familiar with SVN, however, so much of the usages of Google Code was rather intuitive. I was able to follow all the directions provided to create my account and make initial commits with my Hello World program from task1. 

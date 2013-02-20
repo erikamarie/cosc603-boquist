@@ -3,7 +3,7 @@ import java.util.*;
 import java.io.*;
 /**
  * @author Erika Boquist <eboquist@gmail.com>
- * @version 1.3
+ * @version 1.4
  * @since 2012-02-16
  * 
  * The project1 class contains the code for COSC603 project 1.
@@ -39,15 +39,11 @@ public class project1 {
 			lineNumber = new LineNumberReader(textReader);
 			//traverse the lines in the textFile
 			while((lineString  = lineNumber.readLine()) != null){
-				//verify the line number 
-				//System.out.println("I'm on line: " + lineNumber.getLineNumber());
 				//format the lines so we can do something with it
                 formattedLineString = lineString.replaceAll("[\\n]", " ").replaceAll("[!.,?!:;/()]","").split(" ");
                 //create the new map for storing the words
                 wordMap = new LinkedHashMap<String,Integer>();
                 for(int i =0; i< formattedLineString.length; i+=1){
-                	//display all words in each line
-                    //System.out.println(formattedLineString[i]);
                     String tempString = formattedLineString[i];
                     //check if map has the word, if it doesn't, add it, or increase the count
                     if(wordMap.get(tempString) == null){
@@ -61,10 +57,12 @@ public class project1 {
                 	//print if the word is repeated
                 	if(wordMap.get(word) > 1){
                 		wordString = word;
+                		for(int i = 0; i<wordMap.get(word)-1; i +=1){
+                			wordString += " " + word;
+                		}
+                		
                 		System.out.println("Repeated word on line " + lineNumber.getLineNumber() + " : " + wordString);
                 	}
-                	//print out all the words and the # of times they appeared in a line
-                	//System.out.println(word  + " : " + wordMap.get(word));
                 }
 			}
 			textReader.close();

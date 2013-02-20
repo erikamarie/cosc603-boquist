@@ -1,0 +1,3 @@
+Task 4
+This task was the most complicated of each of the tasks. I quickly became familiar with updating my local copies of my source and documentation as well as committing and pushing my changes to the repository. That being said, I have very little familiarity with C, so even with a substantial amount of "googling" how to quickly understand a C program, I had difficulty understanding exactly how the Stutter program worked, not what it was accomplishing.
+My Java programming abilities have clearly relapsed in the execution of this task as my daily duties are almost entire JavaScript. I have completed the coding portion of this task to the best of my abilities and to my understanding of the assignment itself.

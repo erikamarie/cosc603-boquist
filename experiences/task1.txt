@@ -1,0 +1,3 @@
+Task 1
+
+For this task, I already had Eclipse installed on my computer. I followed the directions for installing EGit and the Javadoc plugins with no difficulty. Being somewhat rusty with Java, I created a simple Hello World program and generate basic Javadoc html files.

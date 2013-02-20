@@ -1,0 +1,3 @@
+Task 2
+
+For this task, I was already familiar with GitHub, however as a refresher(and since I'm on a different computer) I checked out my group project from my Operating Systems class that was stored on GitHub. I was able to modify some of the code for the USB RAID that we created by adding some simple print statements and experimented with getting the differences and viewing them in eclipse(which I very much neglected the last time I used GitHub as I was doing mostly documentation.)
