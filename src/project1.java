@@ -3,7 +3,7 @@ import java.util.*;
 import java.io.*;
 /**
  * @author Erika Boquist <eboquist@gmail.com>
- * @version 1.4
+ * @version 1.5
  * @since 2012-02-16
  * 
  * The project1 class contains the code for COSC603 project 1.
@@ -21,7 +21,7 @@ public class project1 {
 	 * The main method for project1 class.
 	 * 
 	 * Main method replicates Stutter.c program to check for
-	 * repeated words in the document
+	 * repeated words in the document.
 	 *
 	 * @param args the arguments
 	 */
@@ -31,10 +31,17 @@ public class project1 {
 		LineNumberReader lineNumber;
 		Map<String, Integer> wordMap;
 		String wordString;
+		Scanner userFilePath = new Scanner(System.in);
+		String filePath;
+		
+		//prompt user for filePath
+		System.out.println("Please enter a file path: ");
+		filePath = userFilePath.next();
+		
+		System.out.println("Path you entered: " + filePath);
 		
 		try{
-			//textFile is retrieved on OSX
-			textFile = new File("/Users/EMac2/Desktop/COSC603/603Project1/src/Project1_Test_File.txt");
+			textFile = new File(filePath);
 			textReader = new FileReader(textFile);
 			lineNumber = new LineNumberReader(textReader);
 			//traverse the lines in the textFile
